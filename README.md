@@ -9,13 +9,13 @@ Minimal runnable, public-safe website starter for cloud onboarding. This is deve
 - Plain CSS for the small starter. Tailwind and shadcn/ui are deferred until reusable UI components justify additional tooling.
 - No external fonts, image services, secrets, analytics, CMS or API requirements. System fonts are a deliberate bootstrap simplification, not final brand typography.
 
-This keeps the previously requested Next.js/TypeScript direction while supporting a content-first portfolio and future case-study routes. Static output can be served by a static web host; see [Next.js static export documentation](https://nextjs.org/docs/app/guides/static-exports). A final paid hosting provider or plan has not been verified. Historical Framer planning is not treated as confirmation of a current hosting contract.
+Next.js/TypeScript supports a content-first portfolio and future case-study routes. Static output can be served by a static web host; see [Next.js static export documentation](https://nextjs.org/docs/app/guides/static-exports). A final paid hosting provider or plan has not been verified. Historical Framer planning is not treated as confirmation of a current hosting contract.
 
 For a static-capable hosting plan, the future deployment artefact is `out/`. If future requirements include server-side forms, authentication or request-time rendering, reassess the hosting plan and export mode first. Deployment, domain changes and hosting purchases require separate approval.
 
 ## Temporary local project
 
-The temporary draft has not been imported, moved or modified. Bounded filename-only checks of common Mac project locations, Codex worktrees, temporary folders and the Business HUB did not locate a matching application manifest. Its technology choices therefore remain unverified; no claim is made that it was fully inspected. The starter lives in its own checkout and contains only newly authored public-safe files.
+The temporary draft has not been imported, moved or modified. A subsequent read-only inspection found a separate Framer verification fixture using React, TypeScript and Vite, with a Framer API shim. It is a test fixture, not an exportable production website. None of its files or media were copied into this starter. The existing Figma/Framer workflow and hosting route remain unchanged; this repository is a separate code-development path. A complete audit of the unfinished draft was not performed.
 
 ## Requirements
 
@@ -91,7 +91,7 @@ Ignore patterns are a backstop, not a guarantee of privacy. Review every staged 
 
 Only the homepage exists; the Services, Work and Contact links are in-page anchors. About, separate service/portfolio pages, CMS, real portfolio assets, enquiry delivery and final branding remain future work. Contact does not collect or send anything. Copy is explicitly placeholder content, and no client results or testimonials are claimed.
 
-Robots and metadata discourage indexing but do not provide access control. Production launch must deliberately review these settings. Automated checks here are smoke/source tests, not full browser, accessibility or performance certification. The final host and temporary draft location still need verification.
+Robots and metadata discourage indexing but do not provide access control. Production launch must deliberately review these settings. Automated checks here are smoke/source tests, not full browser, accessibility or performance certification. The final host and the unfinished draft's readiness still need verification.
 
 The current Next.js React lint plugin does not work with ESLint 10 in this setup. ESLint 9.39.5 is pinned for compatibility; npm reports that major line as unsupported. Upgrade the lint toolchain when the plugin supports ESLint 10. This is a development-tool limitation, not an ignored validation failure.
 
@@ -108,3 +108,16 @@ Verified in a separate Linux development checkout using Node.js 22.23.3 and npm 
 - `git diff --check`: passed before commit.
 
 No hosting deployment, visual browser certification, private-record import or changes to the Mac draft were performed.
+
+### Independent Mac verification — 30 September 2026
+
+Another session populated `main` with the Next.js starter during setup. That existing implementation was preserved, not replaced or force-pushed. A separate fresh Mac checkout was verified with **Node 24.21.0 and npm 11.19.0**:
+
+- `npm ci`: passed; no audit vulnerabilities. npm reported the documented unsupported ESLint 9 warning and an install-script approval warning for `unrs-resolver`; no script approval was added, and validation still passed.
+- `npm run validate`: lint, strict TypeScript and both source checks passed before and after the build.
+- `npm run build`: production compilation and static export to `out/` passed.
+- `npm run preview` and `npm run dev -- --port 3101`: started locally; `npm run smoke` passed against both (set `SMOKE_URL=http://127.0.0.1:3101` for development).
+- Additional Chromium checks at 320, 375, 768 and 1440px passed on development and production preview: rendered homepage, all section links, keyboard skip-to-content path, noindex, no horizontal overflow, and no asset-loading errors or external page requests. Browser-cancelled fetch/navigation requests (`net::ERR_ABORTED`) during anchor changes were logged separately, not counted as missing assets; HTTP errors and application errors remained failures. These checks were run from separate verification tooling, not added as repository dependencies or claimed as `npm test` coverage.
+- A read-only independent review found no blocking source/privacy issues. `git diff --check` passed.
+
+These are bounded smoke and visual checks, not full accessibility or production certification. No deployment, cloud-environment configuration, paid hosting choice, domain changes or live Framer edits were performed.
