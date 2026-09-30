@@ -1,0 +1,35 @@
+# Dependencies and generated build output
+/node_modules/
+/.next/
+/out/
+/coverage/
+*.tsbuildinfo
+next-env.d.ts
+*.log
+.DS_Store
+._*
+# Credentials: never commit real values, including NEXT_PUBLIC_* secrets
+.env
+.env.*
+*.pem
+*.key
+/secrets/
+/credentials/
+# Private business records and source media
+/private/
+/clients/
+/finance/
+/receipts/
+/invoices/
+/contracts/
+/media/
+*.mov
+*.mp4
+*.mxf
+*.braw
+*.r3d
+*.wav
+*.prproj
+*.drp
+*.fcpbundle/
+# This list is only a backstop; review every staged file.
